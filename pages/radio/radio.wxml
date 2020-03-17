@@ -1,0 +1,23 @@
+<view class="f_ac">
+    <back-arrow bind:myevent="back"></back-arrow>
+   <image class="getPhoImg" src="https://ae01.alicdn.com/kf/Haf11f8293cfc4f6b804c022eaddaba45U.png" mode="widthFix" lazy-load>
+      
+   </image>
+   <view class="getPhone">
+       祝福收取人：{{minePhoe}}
+   </view>
+   <view class="heat">
+       <image class="hearBg" wx:if="{{grayJ}}" src="../../img/hearBg.png" mode="widthFix" lazy-load>  
+       </image>
+       <view class="redImg" >
+           <block wx:for="{{imgArr}}" wx:index="index" wx:key="id" wx:if="{{redJ}}">
+               <image class="reading{{index}} readImg_list" wx:if="{{index>J}}" src="{{item}}" mode="scaleToFill" lazy-load></image>
+           </block>
+       </view>
+   </view>
+   <view hover-class="activeClass">
+        <image class="radioBtn animated fadeInUp" bindtouchstart="start" bindtouchend="stop" src="https://ae01.alicdn.com/kf/Hee8ed603b0a04d789cf7eb3aff3c0423v.png" mode="widthFix">
+        </image>
+    </view>
+    <bottom-img></bottom-img>
+</view>

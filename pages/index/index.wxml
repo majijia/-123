@@ -1,0 +1,22 @@
+
+<view class="">
+    <image class="indexBgimg" src="https://ae01.alicdn.com/kf/Hd5d3d8e68fd744c8a8503558a22e4b37s.png" mode="aspectFill" lazy-load></image>
+    <view class="indexOne f_ac">
+      <button wx:if="{{!userId}}" class="indexLogin" hover-class="indexActive" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+      <image class="indexHeadimg" src="{{userPic?userPic:'https://ae01.alicdn.com/kf/Hf1fe827ff0d54c589da052b14c95e52b4.png'}}" mode="widthFix" lazy-load bindtap="goMine"></image>
+      <text class="bigText index_text" bindtap="goMine">
+        {{userName?userName:'登录/注册'}}
+      </text>
+      <image class="indexMiddle" src="https://ae01.alicdn.com/kf/Hcfc24d8a15484b0d8a2013b299ae5b9f0.png" mode="widthFix" lazy-load>
+        
+      </image>
+      <view hover-class="activeClass">
+        <image class="indexBtn animated fadeInUp" bindtap="goPhone" src="https://ae01.alicdn.com/kf/H1c71f1709cad4e7393b1b3ca2678ef69I.png" mode="widthFix" lazy-load></image>
+      </view>
+      <view hover-class="activeClass">
+        <image class="indexBtn animated fadeInUp" bindtap="goMessge" src="https://ae01.alicdn.com/kf/Hcbf43e1e8b7f419c8a2197c3719c636d9.png" mode="widthFix" lazy-load>
+            
+        </image>
+      </view>
+    </view>
+</view>

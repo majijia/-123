@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/radio/radio",
+    "pages/getRadio/getRadio",   
+    "pages/editRadio/editRadio",
+    "pages/mine/mine",
+    "pages/getPhone/getPhone",
+    "pages/getMessge/getMessge"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "disableScroll": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

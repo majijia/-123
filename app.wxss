@@ -1,0 +1,143 @@
+
+@import "/style/animate";
+page{
+  height: 100%;
+  width: 100%;
+}
+/*button*/
+button{
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  line-height:1;
+  position: inherit;
+  background-color:#fff;
+}
+/*flex*/
+.f_ac{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.f_start{
+  text-align: start;
+}
+.f_bc{
+  display: flex;
+  justify-content: center;
+}
+.f_tc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+/*字体居中*/
+.textAlign{
+  text-align: center;
+}
+/*字体大小*/
+.bigText{
+  font-size: 30rpx;
+}
+.smallText{
+  font-size: 24rpx;
+}
+/*字体颜色*/
+.commonColr{
+  color: #000;
+}
+.smallColr{
+  color: #808080;
+}
+.mainColr{
+  color: #004D3D;
+}
+/*公共logo*/
+.getPhoImg{
+  width:211rpx;
+  height: 236rpx;
+  margin-top: 20%;
+
+}
+
+/*首页头部*/
+.indexBgimg{
+  width: 100%;
+  margin-top:-60px;
+}
+.indexHeadimg{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: -80rpx;
+  border-radius: 10rpx;
+}
+.index_text{
+  margin-top: -20rpx;
+}
+/*输入框*/
+.getPhoMessage{
+  width: 78%;
+  margin: 122rpx auto;
+}
+.getPhoInput{
+  border-bottom: 1rpx solid #004D3D;
+  width: 100%;
+  margin-top: 20rpx;
+  height: 70rpx;
+}
+/*播放条*/
+.slider-container{
+  text-align: start;
+  width: 72%;
+}
+/*点击效果*/
+.activeClass{
+  opacity: 0.8;
+}
+/*播放片*/
+.getRadioBg{
+  width: 596rpx;
+  height: 654rpx;
+}
+.getImgTwo{
+  position: absolute;
+  width: 431rpx;
+  height: 431rpx;
+  top: 50%;
+  left: 50%;
+  margin-top: -219.5rpx;
+  margin-left: -216rpx;
+  border-radius: 50%;
+}
+.getImgThr{
+  position: absolute;
+  width: 174rpx;
+  height: 174rpx;
+  top: 50%;
+  left: 50%;
+  margin-top: -87rpx;
+  margin-left: -87rpx;
+}
+.getImgFour{
+  position: absolute;
+  width: 200rpx;
+  height: 204rpx;
+  left: 17%;
+  top: 10%;
+}
+  /*图片旋转*/
+  
+.getImgTwos{
+  display: block;
+  animation: rotate 6s linear infinite;
+}
+  
+@keyframes rotate{
+	0%{
+		transform: rotateZ(0deg);/*从0度开始*/
+	}
+	100%{
+		transform: rotateZ(360deg);/*360度结束*/
+	}
+}

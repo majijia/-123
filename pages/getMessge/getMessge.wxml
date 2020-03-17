@@ -1,0 +1,37 @@
+<view>
+    <back-arrow bind:myevent="back"></back-arrow>
+    <view class="getMess">
+        <image class="getMessImg animated fadeInRight" src="https://ae01.alicdn.com/kf/Hbebda248708a4f68be6f5e04f513a7a6L.png" mode="widthFix" lazy-load>
+            
+        </image>
+    </view>
+    <view class="getMessMain">
+        <view class="getMessTit">
+            一份
+        </view>
+        <view class="getMessTit">
+            来自对方的爱
+        </view>
+        <view class="getMessTit">
+            请接收
+        </view>
+    </view>
+    <view class="a_fc getPhoMessage f_start">
+        <text class="">
+            请输入收件人手机号
+        </text>
+        <input class="getPhoInput" bindblur="bindB" type="number" maxlength="11" value="{{phone}}">
+            
+        </input>
+        <text class="smallText smallColr">
+            祝福语仅可提取一次，请谨慎操作。
+        </text>
+    </view>
+    <image class="getMessBtnItem animated fadeInUp" wx:if="{{!canGo}}" src="../../img/searchOk.png" mode="widthFix" lazy-load>
+        
+    </image>
+    <image class="getMessBtnItem" wx:if="{{canGo}}" bindtap="goGetRadio" src="../../img/search.png" mode="widthFix" lazy-load>
+        
+    </image>
+    <bottom-img></bottom-img>
+</view>

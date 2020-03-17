@@ -1,0 +1,30 @@
+.getMessImg{
+    width: 370rpx;
+    height: 457rpx;
+}
+.getMess{
+    text-align: end;
+}
+.getMessTit{
+    font-size: 50rpx;
+    font-weight:500;
+    font-family:Source Han Sans SC;
+    margin-bottom: 20rpx;
+}
+.getMessMain{
+    margin: -120rpx 0 70rpx 84rpx;
+}
+.getPhoMessage{
+    margin: 10rpx auto;
+}
+.getMessBtn{
+    text-align: center;
+}
+.getMessBtnItem{
+    width: 368rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 214rpx;
+    /* margin: 214rpx 0 114rpx; */
+}

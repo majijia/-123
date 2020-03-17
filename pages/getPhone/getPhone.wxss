@@ -1,0 +1,28 @@
+/* pages/getPhone/getPhone.wxss */
+.textAlign{
+    width: 100%;
+}
+.getPhoImg{
+    width:211rpx;
+    height: 236rpx;
+    margin-top: 265rpx;
+
+}
+
+.getPhoBtn{
+    width: 368rpx;
+    height: 80rpx;
+
+}
+/*自定义返回按钮*/
+.arrow{
+    position: fixed;
+    left: 40rpx;
+    top: 73rpx;
+    display: flex;
+    width: 28rpx;
+    height:28rpx;
+    border-left: 4rpx solid #004d3d;
+    border-top: 4rpx solid #004d3d;
+    transform: rotate(-45deg);
+  }

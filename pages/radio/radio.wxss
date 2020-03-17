@@ -1,0 +1,198 @@
+/* pages/radio/radio.wxss */
+
+.radioBtn{
+    width: 268rpx;
+    height: 268rpx;
+    margin: 80% 0 -60rpx;
+}
+.getPhone{
+    margin-top: 16%;
+    color: #999;
+}
+.heat{
+    position: relative;
+    width: 350rpx;
+    height: 312rpx;
+    top:72%;
+    left: 22%;
+    transform: translateX(-50%) translateY(36%);
+    overflow: hidden;
+}
+.hearBg,.redImg{
+    width: 350rpx;
+    height: 312rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+
+.readImg_list{
+    height: 4rpx !important;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.reading0{
+    width: 58%;
+    top: 0.5%;
+}
+.reading1{
+    width:68%;
+    top:2.5%;
+}
+.reading2{
+    width: 74%;
+    top:5%;
+}
+.reading3{
+    width: 80%;
+    top:7.6%;
+}
+.reading4{
+    width: 84%;
+    top:10%;
+}
+.reading5{
+    width: 88%;
+    top: 12.5%;
+}
+.reading6{
+    width: 92%;
+    top: 15%;
+}
+.reading7{
+    width: 94%;
+    top: 17.5%;
+}
+.reading8{
+    width: 96%;
+    top: 20%;
+}
+.reading9{
+    width: 98%;
+    top: 22.5%;
+}
+.reading10{
+    width: 99%;
+    top: 25.5%;
+}
+.reading11{
+    width: 102%;
+    top: 28%;
+}
+.reading12{
+    width: 102%;
+    top: 30.5%;
+}
+.reading13{
+    width: 102%;
+    top: 33%;
+}
+.reading14{
+    width: 100%;
+    top: 35.5%;
+}
+
+.reading15{
+    width: 99%;
+    top: 38.5%;
+}
+.reading16{
+    width: 99%;
+    top: 41%;
+}
+.reading17{
+    width: 99%;
+    top: 43.5%;
+}
+.reading18{
+    width: 97%;
+    top: 46%;
+}
+.reading19{
+    width: 95%;
+    top: 48.5%;
+}
+ .reading20{
+    width: 93%;
+    top: 51%;
+}
+.reading21{
+    width: 89%;
+    top: 53.5%;
+}
+.reading22{
+    width: 86%;
+    top: 56%;
+}
+.reading23{
+    width: 82%;
+    top: 58.5%;
+}
+.reading24{
+    width: 75.5%;
+    top: 61.5%;
+}
+.reading25{
+    width: 72%;
+    top: 64%;
+}
+.reading26{
+    width: 67%;
+    top: 66.5%;
+}
+.reading27{
+    width: 62%;
+    top: 69%;
+}
+.reading28{
+    width: 58%;
+    top: 71.5%;
+}
+.reading29{
+    width: 52%;
+    top: 74%;
+}
+.reading30{
+    width: 48%;
+    top: 76.5%;
+}
+.reading31{
+    width: 44%;
+    top: 79.5%;
+}
+.reading32{
+    width: 40%;
+    top: 82%;
+}
+.reading33{
+    width: 35%;
+    top: 84.5%;
+}
+.reading34{
+    width: 30%;
+    top: 87%;
+}
+.reading35{
+    width: 25%;
+    top: 89.5%;
+}
+.reading36{
+    width: 20%;
+    top: 92%;
+}
+.reading37{
+    width: 15%;
+    top: 94.5%;
+}
+.reading38{
+    width: 10%;
+    top: 97.5%;
+}
+.reading39{
+    width: 8%;
+    top: 100%;
+}

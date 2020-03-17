@@ -1,0 +1,1 @@
+<view class="arrow" bindtap="goBack"></view>

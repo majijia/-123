@@ -1,0 +1,57 @@
+<view class="">
+    <back-arrow bind:myevent="back"></back-arrow>
+    <view class="f_ac" hover-class="none" hover-stop-propagation="false">
+        <image class="getPhoImg" src="https://ae01.alicdn.com/kf/Haf11f8293cfc4f6b804c022eaddaba45U.png" mode="widthFix" lazy-load>
+        
+        </image>
+    </view>
+    <view class="f_ac mine" bindtap="deleteRadio">
+        <image class="myImg" src="{{sender_avatar}}" mode="widthFix" lazy-load>
+            
+        </image>
+        <view class="setName">
+            {{sender_nickname}}
+        </view>
+    </view>
+    <view class="textAlign">
+        <image class="getRadioBg" src="../../img/getRadio.png" mode="widthFix" lazy-load>
+            
+        </image>
+        <image class="getImgTwo {{isRudio ? 'getImgTwos':''}}" src="https://ae01.alicdn.com/kf/H76975a37251f4379a488af9844336878u.png" mode="widthFix" lazy-load>
+            
+        </image>
+        <image class="getImgThr" src="https://ae01.alicdn.com/kf/H265707d2bde348f3be04af137d574d8ah.png" mode="widthFix" lazy-load>
+            
+        </image>
+        <image class="getImgFour" src="https://ae01.alicdn.com/kf/H799528ad364a47e486cda124a517a6f7Y.png" mode="widthFix" lazy-load>
+            
+        </image>
+        
+    </view>
+    <view class='slider-container'>
+        <slider max="{{duration}}" min="0"  block-size="4" value="{{sliderValue}}" backgroundColor="#A8A8A8" activeColor="#024E3E" block-color="#eee"/>
+        <view class="f_tc">
+            <view>0:{{startDuration<10?'0'+startDuration:startDuration}}</view>
+            <view>0:{{duration<10?'0'+duration:duration}}</view> 
+        </view>
+    </view>
+    <view class="f_bc radioBottom">
+        <view class="f_ac radio_Item" bindtap="isAudio">
+            <image class="radioImg" src="{{isRudio ? 'https://ae01.alicdn.com/kf/H9ba1e23b9ac5443ebf5f7a1b5a4a3523x.png' : 'https://ae01.alicdn.com/kf/H50717e821a4649d39de63608ae220f9fU.png'}}" mode="widthFix" lazy-load>
+                
+            </image>
+            <text class="">
+                {{isRudio ? "暂停":"播放"}}
+            </text>
+        </view>
+        <view class="f_ac radio_List" bindtap="deleteRadio">
+            <image class="delImg" src="https://ae01.alicdn.com/kf/H557d9bb175a94a59bdd69f2bb1b5c3fdr.png" mode="widthFix" lazy-load>
+                
+            </image>
+            <text >
+                我的
+            </text>
+        </view>
+    </view>
+    <bottom-img></bottom-img>
+</view>

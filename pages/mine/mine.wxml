@@ -1,0 +1,63 @@
+<view class="">
+    <image class="indexBgimg" src="https://ae01.alicdn.com/kf/Hd5d3d8e68fd744c8a8503558a22e4b37s.png" mode="aspectFill" lazy-load></image>
+    <back-arrow bindtap="back" class="mineArrow"></back-arrow>
+    <view class="indexOne f_ac">
+      <view class="textAlign">
+        <image class="indexHeadimg" src="{{userPic}}" mode="widthFix" lazy-load></image>
+        <text class="bigText index_text">
+          {{userName}}
+        </text>
+      </view>
+    </view>
+    <view class="f_bc">
+        <view class="mainColr {{isActive==1 ? 'active' :''}}" bindtap="mineTitle" data-num="1">
+            我的留言
+        </view>
+        <view class="mainColr {{isActive==2 ? 'active' :''}}" bindtap="mineTitle" data-num="2">
+            收到的留言
+        </view>
+    </view>
+    <view class="oldTitle" wx:if="{{isAct==1}}">
+        <block wx:for="{{listOne}}" wx:key="id">
+            <view class="f_tc oldTitleItem animated fadeInLeft">
+                <view class="oldTit">
+                    <view class="smallColr smallText oldTitTime">{{item.add_time}}</view>
+                    <view class="f_tc oldTitList">
+                        <view class="smallText">接收人 : {{item.extracte_code}}</view>
+                        <view class="smallColr smallText">{{item.extracte_status}}</view>
+                    </view>
+                </view>
+                <view bindtap="bindAudio" data-num="{{item.id}}" data-path="{{item.path}}">
+                    <image class="mineRadio"  src="{{item.cast ? 'https://ae01.alicdn.com/kf/H9ba1e23b9ac5443ebf5f7a1b5a4a3523x.png':'https://ae01.alicdn.com/kf/H50717e821a4649d39de63608ae220f9fU.png'}}" mode="widthFix" lazy-load>
+                        
+                    </image>
+                </view>
+            </view>
+            
+        </block>
+    </view>
+    <view class="oldTitle" wx:if="{{isAct==2}}">
+        <block wx:for="{{listTwo}}" wx:key="id">
+            <view class="f_tc oldTitleItem animated fadeInLeft">
+                <view class="oldTit">
+                    <view class="smallColr smallText oldTitTime">{{item.add_time}}</view>
+                    <view class="f_tc oldTitList">
+                        <view class="smallText">留言人 : {{item.sender_nickname}}</view>
+                    </view>
+                </view>
+                <view bindtap="bindAudioTwo" data-num="{{item.id}}">
+                    <image class="mineRadio" src="{{item.cast ? 'https://ae01.alicdn.com/kf/H9ba1e23b9ac5443ebf5f7a1b5a4a3523x.png':'https://ae01.alicdn.com/kf/H50717e821a4649d39de63608ae220f9fU.png'}}" mode="widthFix" lazy-load>
+                        
+                    </image>
+                </view>
+            </view>
+            
+        </block>
+    </view>
+    <view class="f_ac" wx:if="{{isAct==0}}">
+        <image class="placeImg" src="https://ae01.alicdn.com/kf/H891b5cbd7eee43c9af1a7366b0c87926g.png" mode="widthFix" lazy-load>
+            
+        </image>
+        <view class="smallText smallColr">此处空空如也</view>
+    </view>
+</view>

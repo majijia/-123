@@ -1,0 +1,5 @@
+<view>
+    <image class="getPhoBg animated flipInX" src="../../img/bottonBg.png" mode="widthFix" lazy-load>
+        
+    </image>
+</view>

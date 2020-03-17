@@ -1,0 +1,72 @@
+<view class="">
+    <view class="f_ac" hover-class="none" hover-stop-propagation="false">
+        <image class="getPhoImg" src="https://ae01.alicdn.com/kf/Haf11f8293cfc4f6b804c022eaddaba45U.png" mode="widthFix" lazy-load>
+        
+        </image>
+        <view class="textAlign">
+            <image class="getRadioBg" src="../../img/getRadio.png" mode="widthFix" lazy-load>
+                
+            </image>
+            <image class="getImgTwo {{isRudio ? 'getImgTwos':''}}" src="https://ae01.alicdn.com/kf/H76975a37251f4379a488af9844336878u.png" mode="widthFix" lazy-load>
+                
+            </image>
+            <image class="getImgThr" src="https://ae01.alicdn.com/kf/H265707d2bde348f3be04af137d574d8ah.png" mode="widthFix" lazy-load>
+                
+            </image>
+            <image class="getImgFour" src="https://ae01.alicdn.com/kf/H799528ad364a47e486cda124a517a6f7Y.png" mode="widthFix" lazy-load>
+                
+            </image>
+            
+        </view>
+        <view class='slider-container'>
+            <slider max="{{duration}}" min="0"  block-size="4" value="{{sliderValue}}" backgroundColor="#A8A8A8" activeColor="#024E3E" block-color="#eee"    />
+            <view class="f_tc">
+                <view>0:{{startDuration<10?'0'+startDuration:startDuration}}</view>
+                <view>0:{{duration<10?'0'+duration:duration}}</view> 
+            </view>
+        </view>
+        <view class="f_bc">
+            <view class="f_ac isStart_item" bindtap="isAudio">
+                <image class="radioImg" src="{{isRudio ? 'https://ae01.alicdn.com/kf/H9ba1e23b9ac5443ebf5f7a1b5a4a3523x.png' : 'https://ae01.alicdn.com/kf/H50717e821a4649d39de63608ae220f9fU.png'}}" mode="widthFix" lazy-load>
+                    
+                </image>
+                <text class="">
+                   {{isRudio ? "暂停":"试听"}}
+                </text>
+            </view>
+            
+            <view class="f_ac radio_Item" bindtap="deleteRadio">
+                <image class="delImg" src="https://ae01.alicdn.com/kf/Hd00723619d544ac183e385867f3d1ee3P.png" mode="widthFix" lazy-load>
+                    
+                </image>
+                <text >
+                    删除重录
+                </text>
+            </view>
+            <view class="f_ac send_item" bindtap="sendRadio">
+                <image class="delImg" src="../../img/send.png" mode="widthFix" lazy-load>
+                    
+                </image>
+                <text >
+                    发送
+                </text>
+            </view>
+        </view>
+    </view>
+    <!--弹出框-->
+    <view class="mock" wx:if="{{isShow}}">
+        <view class="mockBg" wx:if="{{isSend==1}}">
+            <view class="mockTitle">祝福已送达</view>
+            <view class="mockResult" bindtap="sendOk">确认</view>
+        </view>
+        <view class="mockBg" wx:if="{{isSend==2}}">
+            <view class="mockTitle">发送失败</view>
+            <view class="f_mock">
+                <view bindtap="GoMine">返回我的</view>
+                <view class="mockResult" bindtap="sendAgain">再次发送</view>
+
+            </view>
+        </view>
+    </view>
+    <bottom-img></bottom-img>
+</view>

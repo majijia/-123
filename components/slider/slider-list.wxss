@@ -1,0 +1,10 @@
+/* components/slider/slider-list.wxss */
+.f_tc view{
+    font-size: 28rpx;
+    color: #ddd;
+}
+.f_tc{
+    display: flex;
+    justify-content: space-between;
+
+}

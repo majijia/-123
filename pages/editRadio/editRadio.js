@@ -31,14 +31,13 @@ Page({
       that.setData({
         isRudio:true
        })
-       innerAudioContext.onPlay((res)=>{
-         var duration=innerAudioContext.duration;
-       })
-       innerAudioContext.onTimeUpdate(function(res){
+      innerAudioContext.onPlay((res)=>{
+        var duration=innerAudioContext.duration;
+      })
+      innerAudioContext.onTimeUpdate(function(res){
         var currentTime = innerAudioContext.currentTime  * 1000;
         that.setData({ 
           duration:Math.floor(innerAudioContext.duration),
-          // sliderValue: innerAudioContext.currentTime  * 1000
           sliderValue: Math.floor(innerAudioContext.currentTime) ,
           startDuration:Math.floor(innerAudioContext.currentTime)
         });
@@ -48,10 +47,8 @@ Page({
           })
         }
       })
-       innerAudioContext.play();
-
-    }
-     
+      innerAudioContext.play();
+    }  
   },
   /**删除重录 */
   deleteRadio(){
@@ -74,13 +71,12 @@ Page({
       updateState: true,
       sendResult:true
     })
+    /**获取进度条的值 */
     innerAudioContext.onTimeUpdate(function(res){
-      // console.log('onLoad',res);
       var currentTime = innerAudioContext.currentTime  * 1000;
       that.setData({ 
         duration:Math.floor(innerAudioContext.duration),
-        // sliderValue: innerAudioContext.currentTime  * 1000
-        sliderValue: Math.floor(innerAudioContext.currentTime) ,
+        sliderValue: Math.floor(innerAudioContext.currentTime),
         startDuration:Math.floor(innerAudioContext.currentTime)
       });
       if(that.data.duration==that.data.sliderValue){
@@ -103,7 +99,8 @@ Page({
     var that=this;
     let tempFilePath=wx.getStorageSync('filePath');
     if(that.data.sendResult){
-      upLoad('/api/file/send',{openid:wx.getStorageSync('openId'),extracte_code:wx.getStorageSync('minePhone')},tempFilePath).then(res=>{
+      upLoad('/api/file/send',{openid:wx.getStorageSync('openId'),extracte_code:wx.getStorageSync('minePhone')},tempFilePath)
+      .then(res=>{
           let list=JSON.parse(res.data);
           that.setData({
             isShow:true
@@ -123,7 +120,7 @@ Page({
               sendResult:false
             })
           }
-        })
+      })
     }
     else{
       that.setData({
@@ -141,14 +138,10 @@ Page({
       isShow:false,
       isSend:0
     })
-    wx.redirectTo({
-      url:'../mine/mine'
-    })
+    this.goMine();
   },
   GoMine(){
-    wx.redirectTo({
-      url:'../mine/mine'
-    })
+    this.goMine();
     this.setData({
       isShow:false,
       isSend:0
@@ -157,7 +150,13 @@ Page({
   /**再次发送 */
   sendAgain(){
     this.sendFile();
-  }
+  },
+  /**跳转我的 */
+  goMine(){
+    wx.redirectTo({
+      url:'../mine/mine'
+    })
+  },
   // sliderChanging(e) {
   //   this.setData({
   //     updateState: false //拖拽过程中，不允许更新进度条

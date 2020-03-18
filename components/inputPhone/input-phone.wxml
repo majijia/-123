@@ -1,0 +1,3 @@
+<view>
+    <input class="getPhoInput" bindblur="bindB" type="number" maxlength="11" value="{{phone}}"></input>
+</view>

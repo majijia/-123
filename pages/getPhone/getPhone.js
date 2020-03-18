@@ -1,10 +1,7 @@
 // pages/getPhone/getPhone.js
 import {post , wxPromise} from '../../utils/promise';
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  
   data: {
     phone:'',
     minePhone:'',
@@ -18,29 +15,14 @@ Page({
     })
   },
  
-  bindB(e){
-    // console.log(e.detail.value);
-      let minePhone=e.detail.value;
-      const phone=/^[1][3,4,5,7,8,9][0-9]{9}$/;
-      if(phone.test(minePhone)){
-        this.setData({
-          minePhone,
-          canGo:true
-        }) 
-      }
-      else{
-        wx.removeStorageSync('minePhone');
-        wx.showToast({
-          title:'请输入正确格式的手机号',
-          icon:'none'
-        })
-        this.setData({
-          phone:''
-        })
-      }
+  bindBTwo(e){
+    let minePhone=e.detail.detail.value;
+    this.setData({
+      minePhone,
+      canGo:true
+    })
   },
   goRadio(){
-    
     wx.setStorageSync('minePhone',this.data.minePhone);
     if(wx.getStorageSync('minePhone')){
       wx.redirectTo({

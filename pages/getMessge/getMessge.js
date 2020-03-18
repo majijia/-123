@@ -10,7 +10,8 @@ Page({
   },
   goGetRadio(){
     /**提取录音 */
-    post('/api/file/receive',{extracte_code:this.data.phone}).then(res=>{
+    post('/api/file/receive',{extracte_code:this.data.phone})
+    .then(res=>{
       let list = res.data.data.list;
       if(list.length==1){
         wx.setStorageSync('getFailPath',list[0].path);
@@ -39,24 +40,11 @@ Page({
   },
   /**验证手机号 */
   bindB(e){
-    let minePhone=e.detail.value;
-      const phone=/^[1][3,4,5,7,8,9][0-9]{9}$/;
-      if(phone.test(minePhone)){
-        this.setData({
-          phone:minePhone,
-          canGo:true
-        })
-        this.goGetRadio();
-      }
-      else{
-        wx.showToast({
-          title:'请输入正确格式的手机号',
-          icon:'none'
-        })
-        this.setData({
-          phone:''
-        })
-      }
+    let minePhone=e.detail.detail.value;
+    this.setData({
+      phone:minePhone,
+      canGo:true
+    })
   },
   /**
    * 生命周期函数--监听页面加载

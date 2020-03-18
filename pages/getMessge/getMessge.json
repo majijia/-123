@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "back-arrow":"/components/backArrow/back-arrow",
-    "bottom-img":"/components/placeBottom/bottomImg"
+    "bottom-img":"/components/placeBottom/bottomImg",
+    "input-phone":"/components/inputPhone/input-phone"
   }
 }

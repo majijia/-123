@@ -15,7 +15,7 @@
     margin: -120rpx 0 70rpx 84rpx;
 }
 .getPhoMessage{
-    margin: 10rpx auto;
+    margin-bottom: 214rpx;
 }
 .getMessBtn{
     text-align: center;
@@ -25,6 +25,5 @@
     height: 80rpx;
     margin: 0 auto;
     display: block;
-    margin-top: 214rpx;
     /* margin: 214rpx 0 114rpx; */
 }

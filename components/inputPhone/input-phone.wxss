@@ -1,0 +1,7 @@
+/* components/inputPhone/input-phone.wxss */
+.getPhoInput{
+    border-bottom: 1rpx solid #004D3D;
+    width: 100%;
+    margin-top: 20rpx;
+    height: 70rpx;
+  }

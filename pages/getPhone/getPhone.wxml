@@ -1,15 +1,11 @@
 <view class="textAlign">
     <back-arrow bind:myevent="back"></back-arrow>
-    <image class="getPhoImg" src="https://ae01.alicdn.com/kf/Haf11f8293cfc4f6b804c022eaddaba45U.png" mode="widthFix" lazy-load>
-        
-    </image>
+    <image class="getPhoImg" src="https://ae01.alicdn.com/kf/Haf11f8293cfc4f6b804c022eaddaba45U.png" mode="widthFix" lazy-load></image>
     <view class="a_fc getPhoMessage f_start">
         <text class="">
             请输入收件人手机号
         </text>
-        <input class="getPhoInput" bindblur="bindB" type="number" maxlength="11" value="{{phone}}">
-            
-        </input>
+        <input-phone bind:bindB="bindBTwo"></input-phone>
         <text class="smallText smallColr">
             用于TA收取您的祝福
         </text>
@@ -19,7 +15,6 @@
         </image>
         <image class="getPhoBtn" wx:if="{{canGo}}" bindtap="goRadio" src="../../img/okTwo.png" mode="widthFix" lazy-load> 
         </image>
-
     </view>
     <bottom-img></bottom-img>
 </view>

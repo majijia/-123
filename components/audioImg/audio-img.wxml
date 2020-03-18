@@ -1,0 +1,15 @@
+<!--components/audioImg/audio-img.wxml-->
+<view>
+    <image class="getRadioBg" src="../../img/getRadio.png" mode="widthFix" lazy-load>
+                
+    </image>
+    <image class="getImgTwo {{isRudio ? 'getImgTwos':''}}" src="https://ae01.alicdn.com/kf/H76975a37251f4379a488af9844336878u.png" mode="widthFix" lazy-load>
+        
+    </image>
+    <image class="getImgThr" src="https://ae01.alicdn.com/kf/H265707d2bde348f3be04af137d574d8ah.png" mode="widthFix" lazy-load>
+        
+    </image>
+    <image class="getImgFour" src="https://ae01.alicdn.com/kf/H799528ad364a47e486cda124a517a6f7Y.png" mode="widthFix" lazy-load>
+        
+    </image>
+</view>

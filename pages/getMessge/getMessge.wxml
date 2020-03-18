@@ -20,9 +20,7 @@
         <text class="">
             请输入收件人手机号
         </text>
-        <input class="getPhoInput" bindblur="bindB" type="number" maxlength="11" value="{{phone}}">
-            
-        </input>
+        <input-phone bind:bindB="bindB"></input-phone>
         <text class="smallText smallColr">
             祝福语仅可提取一次，请谨慎操作。
         </text>

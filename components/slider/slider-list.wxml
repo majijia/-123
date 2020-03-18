@@ -1,0 +1,6 @@
+<!--components/slider/slider-list.wxml-->
+<slider max="{{duration}}" min="0"  block-size="4" value="{{sliderValue}}" backgroundColor="#A8A8A8" activeColor="#024E3E" block-color="#eee"    />
+<view class="f_tc">
+    <view>0:{{startDuration<10?'0'+startDuration:startDuration}}</view>
+    <view>0:{{duration<10?'0'+duration:duration}}</view> 
+</view>

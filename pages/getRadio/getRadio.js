@@ -21,38 +21,37 @@ Page({
     if(that.data.isRudio){
       that.setData({
         isRudio:false
-       })
-       innerAudioContext.pause();
+      })
+      innerAudioContext.pause();
     }
     else{
       that.setData({
-        isRudio:true
-       })
+         isRudio:true
+      })
        /**添加的进度条 */
-       innerAudioContext.onPlay((res)=>{
+      innerAudioContext.onPlay((res)=>{
         var duration=innerAudioContext.duration;
       })
       innerAudioContext.onTimeUpdate(function(res){
-       var currentTime = innerAudioContext.currentTime  * 1000;
-       that.setData({ 
-         duration:Math.ceil(innerAudioContext.duration),
-         // sliderValue: innerAudioContext.currentTime  * 1000
-         sliderValue: Math.ceil(innerAudioContext.currentTime) ,
-         startDuration:Math.ceil(innerAudioContext.currentTime)
-       });
-       if(that.data.duration==that.data.sliderValue){
-         that.setData({
-           isRudio:false
-         })
-       }
+        var currentTime = innerAudioContext.currentTime  * 1000;
+        that.setData({ 
+          duration:Math.ceil(innerAudioContext.duration),
+          sliderValue: Math.ceil(innerAudioContext.currentTime) ,
+          startDuration:Math.ceil(innerAudioContext.currentTime)
+        });
+        if(that.data.duration==that.data.sliderValue){
+          that.setData({
+            isRudio:false
+          })
+        }
       })
-       innerAudioContext.play();
+      innerAudioContext.play();
     }
      
   },
   /**返回我的 */
   deleteRadio(){
-    innerAudioContext.pause()
+    innerAudioContext.pause();
     wx.redirectTo({
       url:'../mine/mine'
     })
@@ -64,10 +63,9 @@ Page({
       wx.redirectTo({
          url:`../${urls.getMessge}/${urls.getMessge}`
       })
-    },
+  },
   onShow(){
     let audioPath=wx.getStorageSync('getFailPath');
-    console.log('onshow',wx.getStorageSync('sender_nickname'));
     this.setData({
        audioPath,
        sender_avatar:wx.getStorageSync('userPic'),

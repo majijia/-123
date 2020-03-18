@@ -1,0 +1,47 @@
+/* components/audioImg/audio-img.wxss */
+/*播放片*/
+.getRadioBg{
+    width: 596rpx;
+    height: 654rpx;
+  }
+  .getImgTwo{
+    position: absolute;
+    width: 431rpx;
+    height: 431rpx;
+    top: 50%;
+    left: 50%;
+    margin-top: -219.5rpx;
+    margin-left: -216rpx;
+    border-radius: 50%;
+  }
+  .getImgThr{
+    position: absolute;
+    width: 174rpx;
+    height: 174rpx;
+    top: 50%;
+    left: 50%;
+    margin-top: -87rpx;
+    margin-left: -87rpx;
+  }
+  .getImgFour{
+    position: absolute;
+    width: 200rpx;
+    height: 204rpx;
+    left: 17%;
+    top: 10%;
+  }
+    /*图片旋转*/
+    
+  .getImgTwos{
+    display: block;
+    animation: rotate 6s linear infinite;
+  }
+    
+  @keyframes rotate{
+      0%{
+          transform: rotateZ(0deg);/*从0度开始*/
+      }
+      100%{
+          transform: rotateZ(360deg);/*360度结束*/
+      }
+  }

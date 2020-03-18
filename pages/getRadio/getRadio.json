@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "back-arrow":"/components/backArrow/back-arrow",
-    "bottom-img":"/components/placeBottom/bottomImg"
+    "bottom-img":"/components/placeBottom/bottomImg",
+    "audio-img":"/components/audioImg/audio-img",
+    "slider-list":"/components/slider/slider-list"
   }
 }
